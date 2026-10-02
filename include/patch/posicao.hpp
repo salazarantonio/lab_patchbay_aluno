@@ -1,7 +1,7 @@
 #ifndef PATCH_POSICAO_HPP
 #define PATCH_POSICAO_HPP
 
-namespace {
+namespace patch {
     struct posicao {
         int fileira = 0;
         int coluna = 0;

@@ -17,4 +17,4 @@ namespace patch {
     enum class ligacao {direta, precisa_adaptador, incompativel};
 }
 
-#endif
+#endif  

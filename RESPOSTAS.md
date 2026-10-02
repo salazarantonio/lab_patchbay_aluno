@@ -30,6 +30,7 @@ Responda em uma ou duas frases cada. Nao consulte a resposta antes de tentar.
 
 (g) Por que `em()` precisa das duas sobrecargas? O que quebraria se existisse
     so a versao que devolve `ponto&`? E se existisse so a `const ponto&`?
+    R: 
 
 (h) `ocupada()` e metodo `const`. O que aconteceria, exatamente, se voce
     tirasse esse `const`? Cite o codigo do teste que pararia de compilar.

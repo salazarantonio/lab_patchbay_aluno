@@ -16,7 +16,7 @@ add_library(patch_nucleo
 )
 target_include_directories(patch_nucleo PUBLIC include)
 
-target_compile_options(patch_nucle PRIVATE
+target_compile_options(patch_nucleo PRIVATE
     -Wall -Wextra -Wpedantic -Wshadow -Wnon-virtual-dtor -Wold-style-cast
     -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion
     -Wdouble-promotion -Wformat=2 -Werror
@@ -28,14 +28,14 @@ if (PROJETO_TESTES)
     include(FetchContent)
     FetchContent_Declare(Catch2
         GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG v5.0.0
+        GIT_TAG v3.5.2
         GIT_SHALLOW TRUE
         SYSTEM
     )
     FetchContent_MakeAvailable(Catch2)
     
     enable_testing()
-    add_executable(testes testes/test_a.cpp)
+    add_executable(testes testes/test_patch.cpp)
     target_link_libraries(testes PRIVATE
         projeto_nucleo Catch2::Catch2WithMain)
     add_test(NAME testes COMMAND testes)

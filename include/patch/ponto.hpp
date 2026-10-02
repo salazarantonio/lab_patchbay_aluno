@@ -6,7 +6,6 @@
 #include "patch/posicao.hpp"
 
 namespace patch {
-
     class ponto {
         public:
             ponto(const std::string& rotulo, tipo conector, posicao onde);
