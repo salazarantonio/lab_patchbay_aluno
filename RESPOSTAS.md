@@ -28,9 +28,9 @@ Responda em uma ou duas frases cada. Nao consulte a resposta antes de tentar.
 
 ## 4. Const
 
-(g) Por que `em()` precisa das duas sobrecargas? O que quebraria se existisse
-    so a versao que devolve `ponto&`? E se existisse so a `const ponto&`?
-    R: 
+(g) Por que `em()` precisa das duas sobrecargas? O que quebraria se existisse so a versao que devolve `ponto&`? E se existisse so a `const ponto&`?
+    R:  A linnha que pararia de funcionar seria `REQUIRE(somente_leitura.em(0).rotulo() == "voz");`. Ela pararia de funcionar, pois, ao ser declarada como `const`, o objeto constante estaria chamando um método não constante, dando possibilidade de secretamente alterar o objeto.
+    .   Se existisse so a `const ponto&`, a linha `REQUIRE(somente_leitura.em(0).nivel() == -6);` deixaria de funcionar, pois tentaria modificar dados internos, mas const ponto& apenas possibilidade fazer a leitura sem nenhuma modificação.
 
 (h) `ocupada()` e metodo `const`. O que aconteceria, exatamente, se voce
     tirasse esse `const`? Cite o codigo do teste que pararia de compilar.
